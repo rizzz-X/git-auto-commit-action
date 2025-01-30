@@ -21,13 +21,13 @@ jobs:
           ref: master
 
       - name: Update Changelog
-        uses: stefanzweifel/changelog-updater-action@v1
+        uses: rizzz-X/changelog-updater-action@v1
         with:
           release-notes: ${{ github.event.release.body }}
           latest-version: ${{ github.event.release.name }}
 
       - name: Commit updated CHANGELOG
-        uses: stefanzweifel/git-auto-commit-action@v5
+        uses: rizzz-X/git-auto-commit-action@v5
         with:
           branch: master
           commit_message: Update CHANGELOG
